@@ -1,0 +1,24 @@
+{
+  "name": "joguinho2.0",
+  "version": "1.0.0",
+  "description": "joguinho com front do rennan",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indio-cmd/joguinho2.0.git"
+  },
+  "author": "kaua",
+  "license": "ISC",
+  "type":"module",
+  "bugs": {
+    "url": "https://github.com/indio-cmd/joguinho2.0/issues"
+  },
+  "homepage": "https://github.com/indio-cmd/joguinho2.0#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
