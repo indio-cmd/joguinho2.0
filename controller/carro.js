@@ -4,7 +4,7 @@ class ControllerCarro{
 
     Buscar(req, res){
         try {
-const carros = ServiceCarro.Buscar
+const carros = ServiceCarro.Buscar()
 
         res.send({message: carros})
     } catch (error) {
