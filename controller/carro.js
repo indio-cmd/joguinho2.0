@@ -42,7 +42,7 @@ const carros = ServiceCarro.Buscar()
     
     const id =  Number(req.params.id )
     
-    ServiceCarro.Deletar()
+    ServiceCarro.Deletar(id)
 
 res.send({message: "deletado com sucesso"})
 
