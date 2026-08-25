@@ -12,6 +12,19 @@ const carros = ServiceCarro.Buscar()
 }
     }
 
+    Buscarum(req, res){
+          try {
+const id = Number(req.params.id)
+
+const carro = ServiceCarro.Buscar(id)
+
+res.status(200).send({message: carro})
+    } catch (error) {
+        res.status(500).send({message: message.error})
+    }
+
+    }
+
     Criar(req, res){
          try {
                 const  {id, name, marca}  = req.body
@@ -29,7 +42,9 @@ const carros = ServiceCarro.Buscar()
         const id = Number(req.params.id )
         const {name, marca} = req.body
 
-        ServiceCarro.Alterar(name, marca)
+        ServiceCarro.Alterar(id, name, marca)
+
+res.status(201).send({message: "Alterado com sucesso"})
 
     } catch (error) {
         res.status(500).send({message: error.message})

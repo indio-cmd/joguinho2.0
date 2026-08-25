@@ -1,10 +1,11 @@
 import express from "express"
-import BancodeDados from "../repository/carro.js"
 import ControllerCarro from "../controller/carro.js"
 
 const route = express.Router()    
 
 route.get("/buscar", ControllerCarro.Buscar )
+
+route.get("/buscarum/:id", ControllerCarro.Buscarum)
 
 route.post("/criar", ControllerCarro.Criar )
 

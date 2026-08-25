@@ -6,6 +6,21 @@ class ServiceCarro{
         return BancodeDados
     }
 
+    Buscarum(id){
+if(!id){
+    throw new Error ("coloque o id ")
+}
+
+        const carro = BancodeDados.find(it => it.id === id)
+
+if(!carro){
+    throw new Error ("nao  encontrado")
+}
+
+return carro
+
+    }
+
     Criar(id, name, marca){
 
                 if(!id || !name || !marca){
@@ -18,9 +33,10 @@ class ServiceCarro{
                 return(id, name, marca)
     }
 
-    Alterar(name, marca, id){
+    Alterar(id, name, marca){
         //if (id, marca , name){}
          const nome = BancodeDados.find(it => it.id === id)
+
         if(!nome){
          throw new Error("nome ou marca nao encontrado")
         
@@ -28,15 +44,14 @@ class ServiceCarro{
 
     if(!name || !marca){
         throw new Error("parametros invalidos")
-        return
     }
 
          nome.name = name
          nome.marca = marca
         
-          throw new Error("pedido alterado com sucesso")
+         // throw new Error("pedido alterado com sucesso")
 
-          return(name, marca, id)
+          return(name, marca)
     }
 
     Deletar(id){
